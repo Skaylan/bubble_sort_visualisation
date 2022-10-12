@@ -1,5 +1,5 @@
 # bubble_sort_visualisation
-##Bubble sort real time visualisation
+Bubble sort real time visualisation
 
 
 ### to run this project localy
