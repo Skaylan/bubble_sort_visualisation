@@ -2,7 +2,7 @@
 Bubble sort real time visualisation
 
 
-### to run this project localy
+### to run this project locally
 ```
 git clone https://github.com/Skaylan/bubble_sort_visualisation.git
 ```
