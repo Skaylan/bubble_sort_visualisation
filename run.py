@@ -21,7 +21,7 @@ def draw_lines(l: list[int], screen: pygame.Surface, font: pygame.font) -> None:
 def sort(l: list[int], screen: pygame.Surface, clock: pygame.time.Clock, font: pygame.font) -> None:
     for i in range(len(l)):
         for j in range(len(l)-1):
-            if l[j] < l[j+1]:
+            if l[j] > l[j+1]:
                 aux = l[j]
                 l[j] = l[j+1]
                 l[j+1] = aux
@@ -73,7 +73,7 @@ def main():
                 random_list = generate_random_list(size=LIST_SIZE)
                 sort(random_list, screen, clock=clock, font=font_list)
                 draw_lines(l=random_list, screen=screen, font=font_list)
-            is_paused = True
+                is_paused = True
             screen.blit(text, ((WIDTH/2)*.5, HEIGHT/4))
             
         pygame.display.flip()
