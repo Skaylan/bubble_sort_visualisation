@@ -12,8 +12,8 @@ FPS = 60
 
 def draw_lines(l: list[int], screen: pygame.Surface, font: pygame.font) -> None:
     s = 13
-    for n in l:
-        pygame.draw.line(screen, colors['black'], ((WIDTH/2)*.5+s, HEIGHT), ((WIDTH/2)*.5+s, (HEIGHT-l[n-1]*5)), width=10)
+    for n in range(len(l)):
+        pygame.draw.line(screen, colors['black'], ((WIDTH/2)*.5+s, HEIGHT), ((WIDTH/2)*.5+s, (HEIGHT-l[n]*5)), width=10)
         s+=13
         text_list = font.render(f"Array = {str(l)}", True, colors['black'], colors['white'])
         screen.blit(text_list, (50, 100))
