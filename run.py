@@ -1,13 +1,15 @@
-import pygame
-from pygame.locals import *
 import sys
+import pygame
 import random
+from pygame.locals import *
+
 
 colors = {'white': (255,255,255), 'black': (0,0,0)}
-WIDTH = 1310
+WIDTH = 1300
 HEIGHT = 600
 LIST_SIZE = 50
 FPS = 60
+
 
 def draw_lines(l: list[int], screen: pygame.Surface, font: pygame.font) -> None:
     s = 13
@@ -49,7 +51,7 @@ def generate_random_list(size: int=100, zero: bool=False, unique: bool=True) -> 
     return l
 
 
-def main():
+def main() -> None:
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Bubble Sort Visualisation")
@@ -77,5 +79,7 @@ def main():
             screen.blit(text, ((WIDTH/2)*.5, HEIGHT/4))
             
         pygame.display.flip()
+
+
 if __name__ == '__main__':
     main()
